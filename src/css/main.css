@@ -1,0 +1,89 @@
+.sidebar-div {
+    background-color: cornflowerblue;
+    width: 15%;
+    height: 100vh;
+}
+
+.sidebar-ul {
+    gap: 17px;
+    display: flex;
+    flex-direction: column
+}
+
+.sidebar-head {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    padding-top: 20px;
+}
+
+.sidebar-head::after {
+    content: '';
+    position: relative;
+    top: -10px;
+    right: auto;
+    width: 7.5em;
+    border: 2px solid rgb(5, 89, 247);
+    display: inline-flex;
+    flex-direction: column;
+}
+
+ul>li {
+    list-style: none;
+    color: white;
+    font-size: 1.21rem;
+    cursor: pointer;
+}
+
+ul>li.sidebar-brand:hover {
+    font-weight: 500;
+    transition: 50ms ease-in-out;
+}
+
+.topbar {
+    padding: 1.5rem;
+    z-index: 100;
+    position: fixed;
+    top: 0%;
+    left: 15%;
+    right: 0;
+    background: #f6f8fa;
+    box-shadow: 4px 3px 15px #e5e9ec;
+    border-bottom: 1px solid #d7dbe2;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    transition: left .3s ease;
+}
+
+
+@media only screen and (min-width:1690px) and (max-width:1850px) {
+    .sidebar-head::after {
+        width: 6.5em;
+    }
+}
+
+@media (max-width:1689px) {
+    .sidebar-head::after {
+        width: 4.5em;
+    }
+}
+
+/* main content */
+
+.body-content{
+    position: fixed;
+    top: 100px;
+    left: 15%;
+    padding: 30px;
+    width: 85%;
+}
+.card{
+    width: 100%;
+    padding: 0;
+    height: auto;
+}
+.fa-icons{
+    cursor: pointer;
+}
