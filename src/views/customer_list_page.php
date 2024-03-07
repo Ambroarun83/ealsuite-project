@@ -1,7 +1,10 @@
 <!-- <div class="container"></div> -->
-<div class="card" id="customer_list_card" >
+<div class="card" id="customer_list_card">
     <div class="card-header">
-        <div class="card-title">Customer List</div>
+        <div class="card-title">
+            Customer List
+            <button type="button" class="btn btn-success" id="add_customer" name="add_customer" style="float: right;"><i class="fa fa-plus"></i> Create</button>
+        </div>
     </div>
     <div class="card-body">
         <div class="table-responsive">

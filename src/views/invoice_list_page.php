@@ -1,7 +1,9 @@
-
 <div class="card" id="invoice_list_card">
     <div class="card-header">
-        <div class="card-title">Invoice List</div>
+        <div class="card-title">
+            Invoice List
+            <button type="button" class="btn btn-success" id="add_invoice" name="add_invoice" style="float: right;"><i class="fa fa-plus"></i> Create</button>
+        </div>
     </div>
     <div class="card-body">
         <div class="table-responsive">

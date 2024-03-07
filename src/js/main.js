@@ -8,7 +8,7 @@ $(document).ready(function () {
             $('#body_content').load('src/views/customer_list_page.php');
             $('#customer_list_card').show()
             $('#invoice_list_card').hide()
-        } else {
+        } else if (val == 'invoice_list') { 
             $('#body_content').load('src/views/invoice_list_page.php');
             $('#invoice_list_card').show()
             $('#customer_list_card').hide()
@@ -49,23 +49,54 @@ function logout() {
 
 function getList(list_type) {
     //ajax call to get customer list
-    $.post('src/api/getList.php', { list_type }, function (data) {
-        $('#customer_list_body').empty();
-        $('#invoice_list_body').empty();
-        $.each(data, function (k, val) {
-            var html = `<tr>`;
-            $.each(val, function (key, value) {
-                html += `<td>${value}</td>`;
-            })
-            if (list_type == 'customer_list') {
-                html += `<td><i class="fa-solid fa-pencil fa-icons" class='' data-toggle='modal' data-target='edit_customer' data-value='${val.id}'></i></td>`;
-                html += `</tr>`;
-                $('#customer_list_body').append(html);
-            } else {
-                html += `<td><i class="fa-solid fa-pencil fa-icons" class='fa-icons' data-toggle='modal' data-target='edit_invoice' data-value='${val.id}'></i></td>`;
-                html += `</tr>`;
-                $('#invoice_list_body').append(html);
-            }
+    $.ajax({
+        url: 'src/api/getList.php',
+        type: 'POST',
+        data: { list_type },
+        dataType: 'json',
+        success: function (data) {
+            $('#customer_list_body').empty();
+            $('#invoice_list_body').empty();
+            $.each(data, function (k, val) {
+                var html = `<tr>`;
+                $.each(val, function (key, value) {
+                    html += `<td>${value}</td>`;
+                })
+                if (list_type == 'customer_list') {
+                    html += `<td><i class="fa-solid fa-pencil fa-icons edit_cus" data-value='${val.id}'></i></td>`;
+                    html += `</tr>`;
+                    $('#customer_list_body').append(html);
+                } else {
+                    html += `<td><i class="fa-solid fa-pencil fa-icons edit_inv" data-value='${val.id}'></i></td>`;
+                    html += `</tr>`;
+                    $('#invoice_list_body').append(html);
+                }
+            });
+        }
+    }).then(function () {
+        //for editing customer information
+        $('.edit_cus').off('click').click(function () {
+            let id = $(this).data('value');
+            $.post(`src/views/edit_customer_page.php`, { id }, function (data) {
+                $('#body_content').html(data);
+            });
+
+        })
+        //for editing invoice information
+        $('.edit_inv').off('click').click(function () {
+            let id = $(this).data('value');
+            $.post(`src/views/edit_invoice_page.php`, { id }, function (data) {
+                $('#body_content').html(data);
+            });
         });
-    }, 'json');
+        
+        //for adding customer information
+        $('#add_customer').off('click').click(function () {
+            $('#body_content').load('src/views/edit_customer_page.php');
+        });
+        //for adding invoice information
+        $('#add_invoice').off('click').click(function () {
+            $('#body_content').load('src/views/edit_invoice_page.php');
+        });
+    })
 }

@@ -20,7 +20,7 @@
 .sidebar-head::after {
     content: '';
     position: relative;
-    top: -10px;
+    top: -25px;
     right: auto;
     width: 7.5em;
     border: 2px solid rgb(5, 89, 247);
@@ -48,9 +48,9 @@ ul>li.sidebar-brand:hover {
     left: 15%;
     right: 0;
     background: #f6f8fa;
-    box-shadow: 4px 3px 15px #e5e9ec;
+    box-shadow: 4px 3px 15px #9d9d9d;
     border-bottom: 1px solid #d7dbe2;
-    min-height: 100px;
+    height: 82px;
     display: flex;
     align-items: center;
     justify-content: end;
@@ -79,11 +79,20 @@ ul>li.sidebar-brand:hover {
     padding: 30px;
     width: 85%;
 }
-.card{
-    width: 100%;
-    padding: 0;
-    height: auto;
+.dashboard-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20%;
+    font-size: 3rem;
+    color: #fff;
+    font-weight: bolder;
 }
-.fa-icons{
+.card{
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+    background-color: #d3f3f1;
+}
+.body-content>.fa-icons{
     cursor: pointer;
 }

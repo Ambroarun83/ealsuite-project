@@ -1,6 +1,6 @@
 <div class="sidebar-div">
     <ul class="sidebar-ul">
-        <li class="sidebar-head">ADMIN PORTAL</li>
+        <li class="sidebar-head" onclick="location.reload()">ADMIN PORTAL</li>
         <li class="sidebar-brand" data-value="customer_list">
             Customer
         </li>

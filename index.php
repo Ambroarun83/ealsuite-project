@@ -15,13 +15,13 @@
         include './src/views/home.php';
     } else { ?>
         <form action="" method="post">
-            <div class="container">
+            <div class="container login_page">
                 <div class="card">
                     <div class="card-body">
                         <div class="col-12">
                             <div class="row justify-content-md-center">
                                 <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 col-6 ">
-                                    <div class="form-group">
+                                    <div class="form-group ">
                                         <p class="head-text"><b>LOGIN</b></p>
                                         <label for="username">User Name</label>
                                         <input class="form-control" type="text" name="username" id="username" placeholder="Enter User Name" autocomplete="off" required>
