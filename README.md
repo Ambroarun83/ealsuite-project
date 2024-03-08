@@ -56,7 +56,7 @@ Invoice Edit screen
 
 # Screenshot
 
-![Image of Login Page](https://github.com/Ambroarun83/ealsuite-project/blob/main/screenshots/add-customer.png)
+![Image of Login Page](https://github.com/Ambroarun83/ealsuite-project/blob/main/screenshots/login-page.png)
 ![Image of Dashboard](https://github.com/Ambroarun83/ealsuite-project/blob/main/screenshots/dashboard-page.png)
 ![Image of Customer List](https://github.com/Ambroarun83/ealsuite-project/blob/main/screenshots/customer-list.png)
 ![Image of Add Customer](https://github.com/Ambroarun83/ealsuite-project/blob/main/screenshots/add-customer.png)
