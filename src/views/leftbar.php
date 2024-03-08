@@ -2,10 +2,10 @@
     <ul class="sidebar-ul">
         <li class="sidebar-head" onclick="location.reload()">ADMIN PORTAL</li>
         <li class="sidebar-brand" data-value="customer_list">
-            Customer
+            <i class="fa fa-user"></i>&emsp;Customer
         </li>
         <li class="sidebar-brand" data-value="invoice_list"> 
-            Invoice
+        <i class="fa fa-file"></i>&emsp;Invoice
         </li>
     </ul>
 </div>

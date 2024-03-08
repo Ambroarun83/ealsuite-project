@@ -1,6 +1,7 @@
 <?php
 include 'leftbar.php';
 ?>
+    <link rel="stylesheet" href="src/css/main.css">
 
 
 <div class="body-content" id="body_content">

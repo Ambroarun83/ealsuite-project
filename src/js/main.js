@@ -6,12 +6,8 @@ $(document).ready(function () {
 
         if (val == 'customer_list') {
             $('#body_content').load('src/views/customer_list_page.php');
-            $('#customer_list_card').show()
-            $('#invoice_list_card').hide()
         } else if (val == 'invoice_list') { 
             $('#body_content').load('src/views/invoice_list_page.php');
-            $('#invoice_list_card').show()
-            $('#customer_list_card').hide()
         }
     })
 

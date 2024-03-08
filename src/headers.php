@@ -8,10 +8,3 @@
 
 <!-- source css -->
 <link rel="stylesheet" href="./src/css/index.css">
-<?php
-if (isset($_SESSION['user_id'])) {
-?>
-    <link rel="stylesheet" href="./src/css/main.css">
-
-<?php }
-?>

@@ -7,7 +7,8 @@
 .sidebar-ul {
     gap: 17px;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    /* align-items: center; */
 }
 
 .sidebar-head {
@@ -35,9 +36,17 @@ ul>li {
     cursor: pointer;
 }
 
-ul>li.sidebar-brand:hover {
+li.sidebar-brand {
     font-weight: 500;
-    transition: 50ms ease-in-out;
+    padding: 8px 15px;
+}
+
+ul>li.sidebar-brand:hover {
+    font-weight: 700;
+    transition: 70ms ease-in-out;
+    border-radius: 5px;
+    box-shadow: 0 0 7px 0px #000;
+    width: 93%;
 }
 
 .topbar {
@@ -48,7 +57,7 @@ ul>li.sidebar-brand:hover {
     left: 15%;
     right: 0;
     background: #f6f8fa;
-    box-shadow: 4px 3px 15px #9d9d9d;
+    box-shadow: 4px 3px 10px #9d9d9d;
     border-bottom: 1px solid #d7dbe2;
     height: 82px;
     display: flex;
@@ -92,6 +101,7 @@ ul>li.sidebar-brand:hover {
     border: 3px solid #ffffff;
     border-radius: 10px;
     background-color: #d3f3f1;
+    box-shadow: 0 0 10px 0;
 }
 .body-content>.fa-icons{
     cursor: pointer;

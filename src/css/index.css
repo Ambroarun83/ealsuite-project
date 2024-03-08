@@ -18,7 +18,7 @@ body{
     border: 3px solid #ffffff;
     border-radius: 10px;
     background-color: #d3f3f1;
-    /* color: wheat; */
+    box-shadow: 0 0 15px 0;
 }
 .card-title{
     font-weight: bold;
